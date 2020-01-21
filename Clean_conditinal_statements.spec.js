@@ -71,14 +71,11 @@ describe('Clean Conditional Statements App', () => {
         });
 
 
-        it('should return false nationality params are not of type string', () => {
+        it('should return false if nationality params are not of type string', () => {
             const actual = app.danishNationality(1);
             const expected = false;
             assert.equal(actual, expected);
         });
-
-
-
     });
 
 
