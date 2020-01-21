@@ -8,8 +8,6 @@ const morten = {
     prescriptionMedication: false
 }
 
-
-
 const freya = {
     age: (11 * 7),
     BAC: 0.1,
@@ -18,8 +16,6 @@ const freya = {
     species: 'dog',
     prescriptionMedication: false
 }
-
-
 
 
 const benny = {
@@ -167,6 +163,7 @@ function ableToDrive(driver) {
 
 
 module.exports = {
+    thirtyOrAbove,
     seventeenOrAbove,
     ableToDrive,
     notUsingDrugs,

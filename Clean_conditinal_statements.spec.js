@@ -1,7 +1,44 @@
 const app = require('./Clean_conditinal_statements');
 const assert = require('assert')
 
-describe('', () => {
+describe('Clean Conditional Statements App', () => {
+
+
+    describe('ThirtyOrAbove condition', () => {
+
+        it('should return true if Age is 30', () => {
+            const actual = app.thirtyOrAbove(30);
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+
+
+        it('should return true if Age is above 30', () => {
+            const actual = app.thirtyOrAbove(40);
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+
+
+        it('should return false if Age is less then 30', () => {
+            const actual = app.thirtyOrAbove(29);
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+
+
+        it('should return false if no age params is given', () => {
+            const actual = app.thirtyOrAbove();
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+    });
+
+
 
     it('', () => {
         const AGE = 16;
