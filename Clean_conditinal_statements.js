@@ -39,8 +39,12 @@ function thirtyOrAbove(age) {
 
 
 function danishNationality(nationality) {
+
+    if (!nationality) return false;
+    if (typeof (nationality) != 'string') return false;
+
     const REQUIRED_NATIONALITY = 'danish';
-    return nationality === REQUIRED_NATIONALITY;
+    return nationality.toLowerCase() === REQUIRED_NATIONALITY.toLowerCase();
 }
 
 
@@ -163,6 +167,7 @@ function ableToDrive(driver) {
 
 
 module.exports = {
+    danishNationality,
     thirtyOrAbove,
     seventeenOrAbove,
     ableToDrive,

@@ -40,6 +40,49 @@ describe('Clean Conditional Statements App', () => {
 
 
 
+    describe('danishNationality Condition', () => {
+
+        it('should return true if the nationality is "danish"', () => {
+            const actual = app.danishNationality('danish');
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+
+        it('should return true if the nationality is capatalized "Danish"', () => {
+            const actual = app.danishNationality('Danish');
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+
+
+        it('should return false if the nationality is other then "danish" ', () => {
+            const actual = app.danishNationality('German');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+
+        it('should return false no params are given', () => {
+            const actual = app.danishNationality();
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+
+        it('should return false nationality params are not of type string', () => {
+            const actual = app.danishNationality(1);
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+
+
+    });
+
+
+
     it('', () => {
         const AGE = 16;
 
