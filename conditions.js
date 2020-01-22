@@ -102,7 +102,7 @@ function notUsingDrugs(drug) {
 
 function usingLegalDrugs(drug = '') {
     const LEGAL_DRUGS = ['', 'coffee', 'cat food', 'energy drink'];
-    return LEGAL_DRUGS.includes(drug);
+    return LEGAL_DRUGS.includes(drug.toLowerCase());
 }
 
 

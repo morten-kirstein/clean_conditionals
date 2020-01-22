@@ -193,6 +193,20 @@ describe('Using legal drugs', () => {
     });
 
 
+    it('should return true if the word passed in "Coffee" is capatalized', () => {
+        const actual = conditions.usingLegalDrugs('Coffee');
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+    it('should return true if the word passed in "COFFEE" is uppercased', () => {
+        const actual = conditions.usingLegalDrugs('COFFEE');
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
 
     it('should return true if "cat food" is passed in', () => {
         const actual = conditions.usingLegalDrugs('cat food');
