@@ -1,7 +1,7 @@
 const conditions = require('./conditions');
 const assert = require('assert')
 
-describe('ThirtyOrAbove', () => {
+describe('Thirty or above', () => {
 
     it('should return true if Age is 30', () => {
         const actual = conditions.thirtyOrAbove(30);
@@ -37,7 +37,7 @@ describe('ThirtyOrAbove', () => {
 
 
 
-describe('Danish Nationality', () => {
+describe('Danish nationality', () => {
 
     it('should return true if the nationality is "danish"', () => {
         const actual = conditions.danishNationality('danish');
@@ -79,7 +79,7 @@ describe('Danish Nationality', () => {
 });
 
 
-describe('NotAffectedByAlcohol', () => {
+describe('Not affected by alcohol', () => {
 
 
     it('should return true if BAC is less then "0.5"', () => {
@@ -116,6 +116,54 @@ describe('NotAffectedByAlcohol', () => {
     it('should return undefined if BAC is not of type number', () => {
         const actual = conditions.notAffectedByAlcohol('0,5');
         const expected = undefined;
+        assert.equal(actual, expected);
+    });
+});
+
+
+
+describe('Not affected by drugs', () => {
+
+    it('should return true if "false" is passed in', () => {
+        const actual = conditions.notAffectedByDrugs(false);
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+    it('should return true if "undefined" is passed in', () => {
+        const actual = conditions.notAffectedByDrugs(undefined);
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return true if "null" is passed in', () => {
+        const actual = conditions.notAffectedByDrugs(null);
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return true if an empty string "" is passed in', () => {
+        const actual = conditions.notAffectedByDrugs("");
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return false if the string "weed" is passed in', () => {
+        const actual = conditions.notAffectedByDrugs('weed');
+        const expected = false;
+        assert.equal(actual, expected);
+    });
+
+
+    it('should return false if the capatalized string "Weed" is passed in', () => {
+        const actual = conditions.notAffectedByDrugs('Weed');
+        const expected = false;
         assert.equal(actual, expected);
     });
 });
