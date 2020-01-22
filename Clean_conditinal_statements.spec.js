@@ -4,79 +4,8 @@ const assert = require('assert')
 describe('Clean Conditional Statements App', () => {
 
 
-    describe('ThirtyOrAbove condition', () => {
-
-        it('should return true if Age is 30', () => {
-            const actual = app.thirtyOrAbove(30);
-            const expected = true;
-            assert.equal(actual, expected);
-        });
 
 
-
-        it('should return true if Age is above 30', () => {
-            const actual = app.thirtyOrAbove(40);
-            const expected = true;
-            assert.equal(actual, expected);
-        });
-
-
-
-        it('should return false if Age is less then 30', () => {
-            const actual = app.thirtyOrAbove(29);
-            const expected = false;
-            assert.equal(actual, expected);
-        });
-
-
-
-        it('should return false if no age params is given', () => {
-            const actual = app.thirtyOrAbove();
-            const expected = false;
-            assert.equal(actual, expected);
-        });
-
-    });
-
-
-
-    describe('danishNationality Condition', () => {
-
-        it('should return true if the nationality is "danish"', () => {
-            const actual = app.danishNationality('danish');
-            const expected = true;
-            assert.equal(actual, expected);
-        });
-
-
-        it('should return true if the nationality is capatalized "Danish"', () => {
-            const actual = app.danishNationality('Danish');
-            const expected = true;
-            assert.equal(actual, expected);
-        });
-
-
-
-        it('should return false if the nationality is other then "danish" ', () => {
-            const actual = app.danishNationality('German');
-            const expected = false;
-            assert.equal(actual, expected);
-        });
-
-
-        it('should return false no params are given', () => {
-            const actual = app.danishNationality();
-            const expected = false;
-            assert.equal(actual, expected);
-        });
-
-
-        it('should return false if nationality params are not of type string', () => {
-            const actual = app.danishNationality(1);
-            const expected = false;
-            assert.equal(actual, expected);
-        });
-    });
 
 
 

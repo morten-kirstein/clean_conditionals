@@ -1,65 +1,10 @@
 
-const morten = {
-    age: 42,
-    BAC: 0.6,
-    drugs: false,
-    hasDriversLicense: true,
-    species: 'human',
-    prescriptionMedication: false
-}
-
-const freya = {
-    age: (11 * 7),
-    BAC: 0.1,
-    drugs: '',
-    hasDriversLicense: false,
-    species: 'dog',
-    prescriptionMedication: false
-}
-
-
-const benny = {
-    age: 17,
-    BAC: 0.0,
-    co_driver: {
-        age: 30,
-        nationality: 'danish'
-    },
-    drugs: 'coffee',
-    hasDriversLicense: false,
-    species: 'person',
-    prescriptionMedication: false
-}
-
-
-function thirtyOrAbove(age) {
-    return age >= 30;
-}
-
-
-
-function danishNationality(nationality) {
-
-    if (!nationality) return false;
-    if (typeof (nationality) != 'string') return false;
-
-    const REQUIRED_NATIONALITY = 'danish';
-    return nationality.toLowerCase() === REQUIRED_NATIONALITY.toLowerCase();
-}
-
-
+const { morten, freya, benny } = require('./drivers');
+const { thirtyOrAbove, danishNationality } = require('.conditions');
 
 function hasExperiencedCoDriver({ age, nationality } = {}) {
     return thirtyOrAbove(age) && danishNationality(nationality); //?
 }
-
-
-
-function notAffectedByAlcohol(BAC) {
-    const MAXIMUM_ALLOWED_BAC = 0.5;
-    return BAC <= MAXIMUM_ALLOWED_BAC;
-}
-
 
 
 function speciesAllowedToDrive(species) {
@@ -172,6 +117,7 @@ module.exports = {
     seventeenOrAbove,
     ableToDrive,
     notUsingDrugs,
+    notAffectedByAlcohol,
     usingLegalDrugs,
     speciesAllowedToDrive
 }
