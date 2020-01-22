@@ -103,8 +103,8 @@ function notUsingDrugs(drug) {
 
 
 
-function usingLegalDrugs(drug) {
-    const LEGAL_DRUGS = ['coffee', 'cat food', 'energy drink'];
+function usingLegalDrugs(drug = '') {
+    const LEGAL_DRUGS = ['', 'coffee', 'cat food', 'energy drink'];
     return LEGAL_DRUGS.includes(drug);
 }
 
@@ -119,6 +119,7 @@ function seventeenOrAbove(age) {
 module.exports = {
     notAffectedByAlcohol,
     notAffectedByDrugs,
+    usingLegalDrugs,
     thirtyOrAbove,
     danishNationality,
     speciesAllowedToDrive

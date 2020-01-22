@@ -167,3 +167,48 @@ describe('Not affected by drugs', () => {
         assert.equal(actual, expected);
     });
 });
+
+
+describe('Using legal drugs', () => {
+
+    it('should return true if an empty string "" is passed in', () => {
+        const actual = conditions.usingLegalDrugs();
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return true if "coffee" is passed in', () => {
+        const actual = conditions.usingLegalDrugs('coffee');
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return true if "cat food" is passed in', () => {
+        const actual = conditions.usingLegalDrugs('cat food');
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return true if "energy drink" is passed in', () => {
+        const actual = conditions.usingLegalDrugs('energy drink');
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return false if "week" is passed in', () => {
+        const actual = conditions.usingLegalDrugs('weed');
+        const expected = false;
+        assert.equal(actual, expected);
+    });
+});
+
+
+
