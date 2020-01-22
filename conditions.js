@@ -5,7 +5,6 @@ function thirtyOrAbove(age) {
 }
 
 
-
 function danishNationality(nationality = '') {
 
     if (notAnString(nationality)) return;
@@ -15,7 +14,6 @@ function danishNationality(nationality = '') {
 }
 
 
-
 function notAffectedByAlcohol(BAC = 0.0) {
 
     if (isNaN(BAC)) return;
@@ -23,7 +21,6 @@ function notAffectedByAlcohol(BAC = 0.0) {
     const MAXIMUM_ALLOWED_BAC = 0.5;
     return BAC <= MAXIMUM_ALLOWED_BAC;
 }
-
 
 
 function notAffectedByDrugs(drug) {
