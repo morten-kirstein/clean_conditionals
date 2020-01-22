@@ -12,17 +12,17 @@ function ableToDrive(driver) {
         seventeenOrAbove(age),
         speciesAllowedToDrive(species),
         hasDrivingExperience(driver)
-    ]; //?
+    ];
 
-    return conditions.every(condition => condition); //?
+    return conditions.every(condition => condition);
 }
 
 
-// if (ableToDrive(benny)) {
-//     console.log('I´ll drive');
-// } else {
-//     console.log('Better not drive');
-// }
+if (ableToDrive(benny)) {
+    console.log('I´ll drive');
+} else {
+    console.log('Better not drive');
+}
 
 
 
