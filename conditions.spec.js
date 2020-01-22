@@ -178,6 +178,13 @@ describe('Using legal drugs', () => {
     });
 
 
+    it('should return true if no params are passed in', () => {
+        const actual = conditions.usingLegalDrugs();
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
 
     it('should return true if "coffee" is passed in', () => {
         const actual = conditions.usingLegalDrugs('coffee');
