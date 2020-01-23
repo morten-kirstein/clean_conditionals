@@ -27,7 +27,7 @@ describe('Thirty or above', () => {
 
 
 
-    it('should return false if no age params is given', () => {
+    it('should return false if no age argument is given', () => {
         const actual = conditions.thirtyOrAbove();
         const expected = false;
         assert.equal(actual, expected);
@@ -63,7 +63,7 @@ describe('Danish nationality', () => {
 
 
 
-    it('should return false no params are given', () => {
+    it('should return false no argument are given', () => {
         const actual = conditions.danishNationality();
         const expected = false;
         assert.equal(actual, expected);
@@ -71,7 +71,7 @@ describe('Danish nationality', () => {
 
 
 
-    it('should return undefined if nationality params, are not of type "string"', () => {
+    it('should return undefined if nationality argument, are not of type "string"', () => {
         const actual = conditions.danishNationality(1);
         const expected = undefined;
         assert.equal(actual, expected);
@@ -106,7 +106,7 @@ describe('Not affected by alcohol', () => {
 
 
 
-    it('should return true if BAC params are not given', () => {
+    it('should return true if BAC argument are not given', () => {
         const actual = conditions.notAffectedByAlcohol();
         const expected = true;
         assert.equal(actual, expected);
@@ -178,7 +178,7 @@ describe('Using legal drugs', () => {
     });
 
 
-    it('should return true if no params are passed in', () => {
+    it('should return true if no argument are passed in', () => {
         const actual = conditions.usingLegalDrugs();
         const expected = true;
         assert.equal(actual, expected);
@@ -229,6 +229,52 @@ describe('Using legal drugs', () => {
         const expected = false;
         assert.equal(actual, expected);
     });
+});
+
+
+describe('Seventeen or above', () => {
+
+
+    it('should return false if the number is less then 16', () => {
+        const actual = conditions.seventeenOrAbove(16)
+        const expected = false;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return true is the number is equal to 17', () => {
+        const actual = conditions.seventeenOrAbove(17)
+        const expected = true;
+        assert.equal(actual, expected);
+
+    });
+
+
+
+    it('should return true if the number is greater then 17', () => {
+        const actual = conditions.seventeenOrAbove(42);
+        const expected = true;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return false is no argument are given to the function', () => {
+        const actual = conditions.seventeenOrAbove();
+        const expected = false;
+        assert.equal(actual, expected);
+    });
+
+
+
+    it('should return undefined if age argument is not an number', () => {
+        const actual = conditions.seventeenOrAbove('18');
+        const expected = undefined;
+        assert.equal(actual, expected);
+
+    });
+
 });
 
 

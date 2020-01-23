@@ -4,8 +4,12 @@ const utils = {
         return number % 1 != 0;
     },
 
-    notAnString(param) {
-        return typeof (param) != 'string';
+    notAnString(value) {
+        return typeof (value) != 'string';
+    },
+
+    notAnNumber(value) {
+        return typeof (value) != 'number';
     }
 }
 

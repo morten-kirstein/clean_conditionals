@@ -1,4 +1,4 @@
-const { notAnString } = require('./utils');
+const { notAnString, notAnNumber } = require('./utils');
 
 function thirtyOrAbove(age) {
     return age >= 30;
@@ -107,7 +107,10 @@ function usingLegalDrugs(drug = '') {
 
 
 
-function seventeenOrAbove(age) {
+function seventeenOrAbove(age = 0) {
+
+    if (notAnNumber(age)) return;
+
     const MINIMUM_AGE_FOR_DRIVING = 17;
     return age >= MINIMUM_AGE_FOR_DRIVING;
 }
@@ -118,6 +121,7 @@ module.exports = {
     notAffectedByDrugs,
     usingLegalDrugs,
     thirtyOrAbove,
+    seventeenOrAbove,
     danishNationality,
     speciesAllowedToDrive
 }
