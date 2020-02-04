@@ -1,6 +1,6 @@
 
 const { morten, freya, benny } = require('./drivers');
-const { notAffectedByAlcohol, notAffectedByDrugs, speciesAllowedToDrive } = require('.conditions');
+const { notAffectedByAlcohol, notAffectedByDrugs, speciesAllowedToDrive } = require('./conditions');
 
 function ableToDrive(driver) {
     const { age, BAC, drugs, prescriptionMedication, species } = driver;
